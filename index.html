@@ -303,7 +303,8 @@
     }).addTo(mapsub1);
 
     var mapsub2 = L.map('map-sub2', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
-    L.tileLayer('',
+    L.tileLayer('http://api.tiles.mapbox.com/v3/examples.map-zr0njcqy/{z}/{x}/{y}.png', {
+      attribution: '',
       maxZoom: 14
     }).addTo(mapsub2);
 
