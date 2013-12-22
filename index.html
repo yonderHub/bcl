@@ -15,12 +15,12 @@
 
   <link href="css/shop-item.css" rel="stylesheet">
   <!-- mapbox js/css -->
-  <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
   <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script> 
   <style>
-    #map { position:absolute; top:0; bottom:0; width:748px; height: 467px; }
-    #map-sub1 { position:absolute; top:0; bottom:0; width:250px; height: 25px; }
-    #map-sub2 { position:absolute; top:0; bottom:0; width:250px; height: 25px; }
+    #map {  width:748px; height: 467px; }
+    #map-sub1 { width:250px; height: 25px; }
+    #map-sub2 { width:250px; height: 25px; }
   </style>
   </head>
 
@@ -286,8 +286,8 @@
     
     <script>
       var map = L.mapbox.map('map', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
-      var map = L.mapbox.map('map-sub1', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
-      var map = L.mapbox.map('map-sub2', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
+      var mapsub1 = L.mapbox.map('map-sub1', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
+      var mapsub2 = L.mapbox.map('map-sub2', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
 
     </script>
   </body>
