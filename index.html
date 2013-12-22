@@ -19,8 +19,8 @@
   <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script> 
   <style>
     #map {  width:748px; height: 467px; }
-    #map-sub1 { position:absolute; top:0; bottom:0; width:250px; height: 25px; }
-    #map-sub2 { position:absolute; top:0; bottom:0; width:250px; height: 25px; }
+    #map-sub1 { position:relative; top:0; bottom:0; width:250px; height: 25px; }
+    #map-sub2 { position:relative; top:0; bottom:0; width:250px; height: 25px; }
   </style>
   </head>
 
@@ -285,9 +285,9 @@
     <script src="js/bootstrap.js"></script>
     
     <script>
-      var map = L.mapbox.map('map', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
-      var mapsub1 = L.mapbox.map('map-sub1', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
-      var mapsub2 = L.mapbox.map('map-sub2', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
+      var map = L.mapbox.map('map', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
+      var mapsub1 = L.mapbox.map('map-sub1', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
+      var mapsub2 = L.mapbox.map('map-sub2', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
 
     </script>
   </body>
