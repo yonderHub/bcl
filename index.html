@@ -14,9 +14,9 @@
     <!-- Add custom CSS here -->
 
   <link href="css/shop-item.css" rel="stylesheet">
-  <!-- mapbox js/css -->
-   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
-  <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script> 
+  <!-- leaflet js/css -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
   <style>
     #map {  width:748px; height: 467px; }
     #map-sub1 { position:relative; top:0; bottom:0; width:250px; height: 75px; }
@@ -290,9 +290,14 @@
     <script src="js/bootstrap.js"></script>
     
     <script>
-      var map = L.mapbox.map('map', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
-      var mapsub1 = L.mapbox.map('map-sub1', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
-      var mapsub2 = L.mapbox.map('map-sub2', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
+    api.tiles.mapbox.com/v3/examples.map-zr0njcqy/0/0/0.png
+    var map = L.map('map').setView([35.4900, -82.6300], 14);
+    L.tileLayer('api.tiles.mapbox.com/v3/examples.map-9ijuk24y/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+      maxZoom: 14
+    }).addTo(map);
+    //var mapsub1 = L.map('map-sub1', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
+    //var mapsub2 = L.map('map-sub2', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
 
     </script>
   </body>
