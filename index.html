@@ -12,8 +12,14 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-    <link href="css/shop-item.css" rel="stylesheet">
 
+  <link href="css/shop-item.css" rel="stylesheet">
+  <!-- mapbox js/css -->
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+  <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+  <style>
+    #map { position:absolute; top:0; bottom:0; width:748px; height: 467px; }
+  </style>
   </head>
 
   <body>
@@ -30,15 +36,7 @@
           <a class="navbar-brand" href="#home">Bent Creek Loops</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!--<div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">Sart</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>-->
-        <!--</div><--><!-- /.navbar-collapse -->
-     <!-- </div>--><!-- /.container -->
+
     </nav>
 
     <div class="container">
@@ -128,7 +126,8 @@
         <div class="col-md-8">
 
           <div class="thumbnail">
-            <img class="img-responsive" src="http://placehold.it/800x500" alt="">
+            <div id='map'></div>
+            <img class="img-responsive" src="http://placehold.it/748x467" alt="">
             <div class="caption-full">
               <h4 class="pull-right">0 miles</h4>
               <h4><a href="#">No Loops Yet</a></h4>
@@ -280,6 +279,10 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+    
+    <script>
+      var map = L.mapbox.map('map', 'examples.map-9ijuk24y').setView([35.4900, -82.6300], 14);
 
+    </script>
   </body>
 </html>
