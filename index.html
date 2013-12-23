@@ -277,19 +277,19 @@
     var map = L.map('map').setView([35.4900, -82.6300], 14);
     L.tileLayer('http://api.tiles.mapbox.com/v3/daveism.gk7mbi1f/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-      maxZoom: 14
+      maxZoom: 18
     }).addTo(map);
 
     var mapsub1 = L.map('map-sub1').setView([35.4900, -82.6300], 14);
     L.tileLayer('http://api.tiles.mapbox.com/v3/daveism.gk7mbi1f/{z}/{x}/{y}.png', {
       attribution: '',
-      maxZoom: 14
+      maxZoom: 18
     }).addTo(mapsub1);
 
     var mapsub2 = L.map('map-sub2', 'examples.map-9d0r2yso').setView([35.4900, -82.6300], 14);
     L.tileLayer('http://api.tiles.mapbox.com/v3/daveism.gk7mbi1f/{z}/{x}/{y}.png', {
       attribution: '',
-      maxZoom: 14
+      maxZoom: 18
     }).addTo(mapsub2);
 
 
