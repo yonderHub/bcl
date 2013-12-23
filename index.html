@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
   <style>
-    #map {  width:748px; height: 467px; }
+    #map {  position:relative; width:100%; height: 467px; }
     #map-sub1 { position:relative; top:0; bottom:0; width:250px; height: 75px; }
     #map-sub2 { position:relative; top:0; bottom:0; width:250px; height: 75px; }
   </style>
@@ -52,65 +52,51 @@
             
             <hr>
 
-          <form class="form-horizontal" role="form">
-            
-            <div class="form-group">
-              <label for="iDistance" class="col-sm-3 control-label">Distance</label>
-              <div class="col-sm-7">
-                <input type="number" class="form-control" id="iDistance" 
-                    placeholder="Maximum Distance">                
+            <form class="form-horizontal" role="form">
+              
+              <div class="form-group">
+                <label for="iDistance" class="control-label">
+                  Total distance
+                </label>
+                  <input type="number" class="form-control" id="iDistance" 
+                      placeholder="Maximum Distance">                
               </div>
-            </div>
 
-
-
-            <div class="form-group">
-              <label for="iStartPT" class="col-sm-3 control-label">Start at</label>
-              <div class="col-sm-7">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Rice Pinacle Parking Area<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Rice Pinacle Parking Area</a></li>
-                    <li><a href="#">Hard Times Parking Area</a></li>
-                    <li><a href="#">Ledford Branch Parking Area</a></li>
-                  </ul> 
-                </div>  
+              <div class="form-group">
+                <label for="sStartPT" class="control-label">
+                  Starting at:
+                </label>
+                <select id="sStartPT" class="form-control">
+                  <option>Rice Pinacle Parking Area</option>
+                  <option>Hard Times Parking Area</option>
+                  <option>Ledford Branch Parking Area</option>
+                </select>
              </div>
+
+            <div class="form-group">
+              <label for="sFeature" class="control-label">
+                Including a:
+              </label>
+              <select iDistance="sFeature" class="form-control ">
+                <option>Downhill</option>
+                <option>Climb</option>
+                <option>Waterfall</option>
+                <option>View</option>
+              </select>
             </div>
 
             <div class="form-group">
-              <label for="iInclude" class="col-sm-3 control-label">Include</label>
-              <div class="col-sm-7">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Downhill<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Climb </a></li>
-                    <li><a href="#">Downhill </a></li>
-                    <li><a href="#">Waterfall </a></li>
-                    <li><a href="#">View </a></li>
-                  </ul> 
-                </div>  
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-sm-offset-3 col-sm-7">
-                <button type="submit" class="btn btn-primary ">
-                  Create Loop
-                  <span class="glyphicon glyphicon-exclamation-sign"></span>
-                </button>
-              </div>
+              <button type="submit" class="btn btn-primary ">
+                Create Loop
+                <span class="glyphicon glyphicon-exclamation-sign"></span>
+              </button>
             </div>
 
           </form>
 
           </div><!-- /well -->
 
-          <div class="well">
+        <div class="well">
             <h3>What is this?</h3>
             <p>
               Ever wanted to create a loop in bent creek based on a distane?  
@@ -160,7 +146,6 @@
 
             <div class="panel panel-default">
               <div class="panel-heading">
-                
                 <h4 class="panel-title">
                     Option 2
                     <span class="pull-right text-primary">9.5 miles</span> 
@@ -289,7 +274,6 @@
     <script src="js/bootstrap.js"></script>
     
     <script>
-    //api.tiles.mapbox.com/v3/examples.map-zr0njcqy/0/0/0.png
     var map = L.map('map').setView([35.4900, -82.6300], 14);
     L.tileLayer('http://api.tiles.mapbox.com/v3/daveism.gk7mbi1f/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
