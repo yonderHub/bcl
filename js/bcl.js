@@ -1,6 +1,6 @@
 BCL = {};
 var BCL  = {
-	function:createloop(aNode,aDistance){
+	createloop:function(aNode,aDistance){
 		url = "http://192.168.1.103:3000/bcl/loop/"+aNode+"/"+aDistance;
 
 	    $.ajax({
@@ -13,7 +13,7 @@ var BCL  = {
 	     });
 
 	},
-	function:addtomap(gjson){
+	addtomap:function(gjson){
 		geojsonLayer = L.geoJson(gjson).addTo(map);
 	}
 }
