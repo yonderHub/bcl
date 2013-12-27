@@ -17,6 +17,10 @@
   <!-- leaflet js/css -->
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+
+  <!-- bent creek loop js -->
+  <script src="js/bcl.js"></script>
+
   <style>
     #map {  position:relative; width:100%; height: 467px; }
     #map-sub1 { position:relative; top:0; bottom:0; width:250px; height: 75px; }
@@ -86,7 +90,7 @@
             </div>
             <hr>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary ">
+              <button type="submit" class="btn btn-primary " onclick="BCL.Loops.createloop(9262,6)">
                 Create Loop
                 <span class="glyphicon glyphicon-exclamation-sign"></span>
               </button>
@@ -273,7 +277,9 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
     
+
     <script>
     var map = L.map('map').setView([35.4900, -82.6300], 14);
     L.tileLayer('http://api.tiles.mapbox.com/v3/daveism.gk7mbi1f/{z}/{x}/{y}.png', {
@@ -293,6 +299,7 @@
       maxZoom: 18
     }).addTo(mapsub2);
 
+   
 
     </script>
   </body>
