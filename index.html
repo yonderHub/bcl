@@ -71,9 +71,9 @@
                   Starting at:
                 </label>
                 <select id="sStartPT" class="form-control">
-                  <option>Rice Pinacle Parking Area</option>
-                  <option>Hard Times Parking Area</option>
-                  <option>Ledford Branch Parking Area</option>
+                  <option value="9262" >Rice Pinacle Parking Area</option>
+                  <option value="7357" >Hard Times Parking Area</option>
+                  <option value="8634" >Ledford Branch Parking Area</option>
                 </select>
              </div>
 
@@ -81,7 +81,7 @@
               <label for="sFeature" class="control-label">
                 Including a:
               </label>
-              <select iDistance="sFeature" class="form-control ">
+              <select iDistance="sFeature" class="form-control " disabled="">
                 <option>Downhill</option>
                 <option>Climb</option>
                 <option>Waterfall</option>
@@ -90,7 +90,7 @@
             </div>
             <hr>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary " onclick="BCL.createloop(9262,6)">
+              <button type="button" id="bLoop" class="btn btn-primary " onclick="BCL.createloop($('#sStartPT').val(),$('#iDistance').val())">
                 Create Loop
                 <span class="glyphicon glyphicon-exclamation-sign"></span>
               </button>
@@ -283,7 +283,7 @@
     <script>
     var map = L.map('map').setView([35.4900, -82.6300], 14);
     L.tileLayer('http://api.tiles.mapbox.com/v3/daveism.gk7mbi1f/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>;Loops by YonderHub',
       maxZoom: 18
     }).addTo(map);
 
