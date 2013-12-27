@@ -1,5 +1,5 @@
-BCL.Loops = {};
-var BCL.Loops  = {
+BCL = {};
+var BCL  = {
 	function:createloop(aNode,aDistance){
 		url = "http://192.168.1.103:3000/bcl/loop/"+aNode+"/"+aDistance;
 
