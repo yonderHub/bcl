@@ -71,12 +71,12 @@
                   Starting at:
                 </label>
                 <select id="sStartPT" class="form-control">
-                  <option value="9262" >Rice Pinacle Parking Area</option>
-                  <option value="7357" >Hard Times Parking Area</option>
-                  <option value="8634" >Ledford Branch Parking Area</option>
+                  <option value="2526" >Rice Pinacle Parking Area</option>
+                  <option value="14985" >Hard Times Parking Area</option>
+                  <option value="15099" >Ledford Branch Parking Area</option>
                 </select>
              </div>
-
+<!--
             <div class="form-group">
               <label for="sFeature" class="control-label">
                 Including a:
@@ -88,6 +88,7 @@
                 <option>View</option>
               </select>
             </div>
+    -->
             <hr>
             <div class="form-group">
               <button type="button" id="bLoop" class="btn btn-primary " onclick="BCL.createloop($('#sStartPT').val(),$('#iDistance').val())">
@@ -98,8 +99,19 @@
 
           </form>
 
-          </div><!-- /well -->
+            <h3>What is this?</h3>
+            <p>
+              Ever wanted to create a new loop in Bent Creek based on a distance?   
+              Well here it is, a simple web app that takes a distance, a staring point, 
+              and a feature - downhill, climb, or view.  Click Create Loop and viola you have a loop!  
+              Then get out and Hike, Bike, or Run.
+            </p>
+            <p>
+              Give it try tell us what your think! 
+            </p>
 
+          </div><!-- /well -->
+<!--
         <div class="well">
             <h3>What is this?</h3>
             <p>
@@ -111,7 +123,8 @@
             <p>
               Give it try tell us what your think! 
             </p>
-          </div><!-- /well -->
+          </div>
+        -->
 
         </div>
 
@@ -123,9 +136,9 @@
             </div>
             
             <div class="caption-full">
-              <h4 class="pull-right">0 miles</h4>
-              <h4><a href="#">No Loops Yet</a></h4>
-              <p>No Loops enter criteria on left to start creating your loop</p>
+              <h4 class="pull-right"><span id="theDistance">0</span> miles</h4>
+              <h4><a href="#" id="theLoopName">No Loops Yet</a></h4>
+              <p><span id="theTrails">No Loops enter criteria on left to start creating your loop</span></p>
             </div>
             <div class="ratings">
               <p class="pull-right">3 reviews</p>
@@ -203,7 +216,7 @@
 
 
           </div>   
-          --> 
+        
           <div class="well">
             <h3>Review - comming soon!</h3>
             <div class="text-right">
@@ -259,7 +272,7 @@
 
       </div>
 
-    </div><!-- /.container -->
+    </div>
 
     <div class="container">
 
@@ -273,8 +286,8 @@
         </div>
       </footer>
 
-    </div><!-- /.container -->
-
+    </div>
+  --> 
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
