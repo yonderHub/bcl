@@ -86,7 +86,7 @@ var BCL  = {
 			if(i>0 && i<cnt){
 				var end = 'Continue'
 				if(i==(cnt-1)){end='End on '}
-				midstr2= '.<br>' +end+ ' on ' + seg.properties.segment_name + ' for '
+				midstr2= '.<br>' +end+ ' on ' + seg.properties.segment_name + ' at '
 			}else{
 				midstr2=' '
 			}
