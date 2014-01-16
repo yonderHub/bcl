@@ -80,18 +80,18 @@ var BCL  = {
 			if(i>0 && i<cnt){
 				midstr=' '
 			}else{
-				midstr=' go '
+				midstr=' for '
 			}
 
 			if(i>0 && i<cnt){
 				var end = 'Continue'
 				if(i==(cnt-1)){end='End on '}
-				midstr2= '.<br>' +end+ ' on ' + seg.properties.segment_name + ' at '
+				midstr2= '.<br>' +end+ ' on ' + seg.properties.segment_name + ' for '
 			}else{
 				midstr2=' '
 			}
 
-			segh = startstr + seg.properties.segment_name + midstr2  + midstr + seg.properties.totalcost + endstr;
+			segh = startstr + seg.properties.segment_name + midstr2  + midstr + seg.properties.cost + endstr;
 			tarr.push(segh);
 		}
 		tarr = BCL.uniqueArray(tarr)
