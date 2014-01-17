@@ -37,7 +37,7 @@ var BCL  = {
 		var name = BCL.randomstring(15)
 		var trails = BCL.getSegments(gjson);
 
-		$('#theDistance').html(feat.properties.totalcost);
+		$('#theDistance').html('Distance: '+ feat.properties.totalcost);
 		$('#theLoopName').html('Loop - ' + feat.properties.loopid);
 		$('#theTrails').html('Trail Directions:<br>' + trails);
 			
@@ -64,13 +64,21 @@ var BCL  = {
 		var trailHTML = '';
 		var seg;
 		var tarr = [];
+		var lastTrail = '';
 
 		for(var i=0;i<cnt;i++){
 			seg =  gjson.features[i];
+
+			if(seg.properties.segment_name == lastTrail){
+				theturn = ' - continue on '
+			}else{
+				theturn = ', then turn on to '
+			}
+
 			if (i == cnt-1){
 				endstr=' miles'	
 			}else{
-				endstr= ' miles, and turn on to '
+				endstr= ' miles' + theturn
 			}
 			if (i==0){
 				startstr='Start on '
@@ -84,15 +92,16 @@ var BCL  = {
 			}
 
 			if(i>0 && i<cnt){
-				var end = 'Continue'
+				var end = 'Travel'
 				if(i==(cnt-1)){end='End on '}
 				midstr2= '.<br>' +end+ ' on ' + seg.properties.segment_name + ' for '
 			}else{
 				midstr2=' '
 			}
-
 			segh = startstr + seg.properties.segment_name + midstr2  + midstr + seg.properties.cost + endstr;
 			tarr.push(segh);
+			lastTrail = seg.properties.segment_name;
+
 		}
 		tarr = BCL.uniqueArray(tarr)
 		cnt=tarr.length;
