@@ -1,7 +1,7 @@
 BCL = {};
 var BCL  = {
 	createloop:function(aNode,aDistance){
-		urlStr = "http:/54.197.234.215:3000/bcl/loop/"+aNode+"/"+aDistance; //54.197.234.215
+		urlStr = "http://54.197.234.215:3000/bcl/loop/"+aNode+"/"+aDistance; //54.197.234.215
 		$('#bLoop').html('Create Another Loop <span class="glyphicon glyphicon-exclamation-sign"></span>');
 	    $.ajax({
 	    	type : "GET",
